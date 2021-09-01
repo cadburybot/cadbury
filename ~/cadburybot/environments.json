@@ -1,0 +1,8 @@
+{
+    "dev": {
+        "protocol": "http",
+        "base_url": "localhost",
+        "port": 3000,
+        "authorization_header": ""
+    }
+}
