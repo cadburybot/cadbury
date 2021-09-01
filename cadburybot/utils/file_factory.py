@@ -1,7 +1,8 @@
 import json
 import os
+from pathlib import Path
 
-CONFIG_DIR = "~/cadburybot"
+CONFIG_DIR = f"{str(Path.home())}/cadburybot"
 ENV_FILE = f"{CONFIG_DIR}/environments.json"
 
 
