@@ -21,6 +21,10 @@ class FileFactory:
 
 class EnvironmentStore:
     @staticmethod
+    def file_name() -> str:
+        return ENV_FILE
+
+    @staticmethod
     def read() -> dict:
         return FileFactory.read(file_name=ENV_FILE)
 
