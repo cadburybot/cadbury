@@ -1,6 +1,6 @@
 # CadburyBot :rocket:
 
-## Sneak Peak
+## Sneak Peak 👀
 
 ![alt text](https://github.com/cadburybot/cadbury/blob/main/images/cadbury_status.png?raw=true)
 
