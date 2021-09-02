@@ -1,5 +1,3 @@
-![alt text](https://github.com/cadburybot/cli/blob/main/logo.png?raw=true)
-
 # CadburyBot :rocket:
 
 ## Sneak Peak
