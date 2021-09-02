@@ -1,32 +1,26 @@
-![alt text](https://github.com/cadburybot/cli/blob/main/logo.png?raw=true)
+![alt text](https://github.com/cadburybot/cadbury/blob/main/logo.png?raw=true)
 # CadburyBot :rocket:
 
 ## Under development 🚧
 
 Cadbury is a super light-weight APIClient which manages multiple environments like dev/qa/local/prod and you name it. Unlike cURL which is a command with options based, Cadbury only needs a name to hit request. Cadbury manages all the requests grouped as environments for you. 
     
-And yeah it is a CLI. You don't have to leave your terminal at all. You can just send a request as easy as `cb hit user_login`, where `user_login` is the name for the request that Cadbury manages.
+And yeah it is a CLI. You don't have to leave your terminal at all. You can just send a request as easy as `cadbury hit user_login`, where `user_login` is the name for the request that Cadbury manages.
 
-Configuring environments is also so easy. You can use `cb env set <env-name>` command and Cadbury creates an environment for you.
+Configuring environments is also so easy. You can use `cadbury env create <env-name>` command and Cadbury creates an environment for you.
     
 ## Installation
 
-Add this line to your application's Gemfile:
-
-```ruby
-gem 'cadburybot'
-```
-
-And then execute:
+Install using pip
 
 ```bash
-bundle install
+pip install cadburybot
 ```
 
-Or install it yourself as:
+Or install it with poetry using:
 
 ```bash
-gem install cadburybot
+poetry add cadburybot
 ```
     
 ## Usage
@@ -35,19 +29,21 @@ Let us assume that you want to create an environment named `dev` and create a us
     
 
 ```bash
-cb env new dev # Cadbury interactively guides you through the creation process. 
-cb env get dev
-cb env get # Get all environments.py
-cb env edit dev
-cb env delete dev
+cadbury env create dev # Cadbury interactively guides you through the creation process. 
+cadbury env get dev
+cadbury env get # Get all environments.py
+cadbury env edit dev
+cadbury env delete dev
+cadbury env change prod # Changes your current environment
 
-cb request new user_login --env dev    
-cb request get user_login --env dev
-cb request get --env dev 
-cb request edit user_login --env dev
-cb request delete user_login --env dev
+# All requests operations will be done for the current environment
+cadbury request create user_login 
+cadbury request get user_login 
+cadbury request get 
+cadbury request edit user_login 
+cadbury request delete user_login
 
-cb hit user_login --env dev
+cb hit user_login
 ```
 
 > Pro tip: CadburyBot saves all these configurations as JSON file under `~/cadburybot` directory. Instead of using `request` or `env` command, You can also manually update them.
@@ -103,4 +99,4 @@ The gem is available as open source under the terms of the [MIT License](https:/
 
 ## Code of Conduct
 
-Everyone interacting in the cadburybot project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/cadburybot/cli/blob/master/CODE_OF_CONDUCT.md).
+Everyone interacting in the cadburybot project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/cadburybot/cadbury/blob/master/CODE_OF_CONDUCT.md).
