@@ -1,14 +1,23 @@
 ![alt text](https://github.com/cadburybot/cli/blob/main/logo.png?raw=true)
+
 # CadburyBot :rocket:
+
+## Sneak Peak
+
+![alt text](https://github.com/cadburybot/cadbury/blob/main/images/cadbury_status.png?raw=true)
 
 ## Under development 🚧
 
-Cadbury is a super light-weight APIClient which manages multiple environments like dev/qa/local/prod and you name it. Unlike cURL which is a command with options based, Cadbury only needs a name to hit request. Cadbury manages all the requests grouped as environments for you. 
-    
-And yeah it is a CLI. You don't have to leave your terminal at all. You can just send a request as easy as `cadbury hit user_login`, where `user_login` is the name for the request that Cadbury manages.
+Cadbury is a super light-weight APIClient which manages multiple environments like dev/qa/local/prod and you name it.
+Unlike cURL which is a command with options based, Cadbury only needs a name to hit request. Cadbury manages all the
+requests grouped as environments for you.
 
-Configuring environments is also so easy. You can use `cadbury env create <env-name>` command and Cadbury creates an environment for you.
-    
+And yeah it is a CLI. You don't have to leave your terminal at all. You can just send a request as easy
+as `cadbury hit user_login`, where `user_login` is the name for the request that Cadbury manages.
+
+Configuring environments is also so easy. You can use `cadbury env create <env-name>` command and Cadbury creates an
+environment for you.
+
 ## Installation
 
 Install using pip
