@@ -1,21 +1,31 @@
+import json
 import os
 import subprocess
 import sys
 from typing import Any
 
 import typer
-import json
+
+PREFIX = typer.style("> ", fg=typer.colors.BRIGHT_YELLOW)
 
 
 class Echo:
     @staticmethod
-    def json(data: dict, msg: Any = "> There you go!"):
+    def json(data: dict, divider=False, dim=False):
+        if divider:
+            Echo.divider()
         json_data = json.dumps(data, indent=4)
-        Echo.divider()
-        typer.secho(msg, bold=True, fg="green")
-        Echo.divider()
-        typer.secho(json_data)
-        Echo.divider()
+        typer.secho(json_data, dim=dim)
+        if divider:
+            Echo.divider()
+
+    @staticmethod
+    def info(msg: Any):
+        typer.secho(f"{PREFIX} {msg}", bold=True)
+
+    @staticmethod
+    def error(string: Any):
+        typer.secho(f"{PREFIX} {string}", fg="red", bold=True)
 
     @staticmethod
     def open_file(filename):
@@ -27,6 +37,18 @@ class Echo:
     @staticmethod
     def divider():
         typer.secho(".....................................", dim=True)
+
+    @staticmethod
+    def prefix_start():
+        return typer.style(">", fg=typer.colors.YELLOW)
+
+    @staticmethod
+    def prefix_mid():
+        return typer.style("|", fg=typer.colors.YELLOW)
+
+    @staticmethod
+    def prefix_end():
+        return typer.style("|_", fg=typer.colors.YELLOW)
 
     @staticmethod
     def dimmed(string: str):
