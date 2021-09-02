@@ -1,4 +1,4 @@
-![alt text](https://github.com/cadburybot/cadbury/blob/main/logo.png?raw=true)
+![alt text](https://github.com/cadburybot/cli/blob/main/logo.png?raw=true)
 # CadburyBot :rocket:
 
 ## Under development 🚧
